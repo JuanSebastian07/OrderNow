@@ -1,0 +1,104 @@
+[versions]
+agp = "8.9.1"
+kotlin = "2.0.21"
+coreKtx = "1.16.0"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+lifecycleRuntimeKtx = "2.8.7"
+activityCompose = "1.10.1"
+composeBom = "2025.04.01"
+#splash
+coreSplashscreen = "1.0.1"
+storage = "1.5.0"
+#ksp + dagger
+ksp = "2.0.21-1.0.27"
+hiltVersion = "2.51.1"
+#navigation version
+navigationRuntimeKtx = "2.8.9"
+hiltNavigationComposeVersion = "1.2.0"
+navigation-compose = "2.8.9"
+#Serializable y Parcelable
+kotlinSerialization = "1.7.2"
+kotlinParcelize = "1.8.10"
+lottie = "6.3.0"
+#Firebase + Auth
+credentialsPlayServicesAuth = "1.5.0"
+#Firebase + Realtime Database
+firebaseDatabaseKtx = "21.0.0"
+googleId = "1.1.1"
+firebaseBom = "33.13.0"  # Versión de Firebase BoM que estás usando
+gmsGoogleServices = "4.4.2"
+#coil
+coil = "2.6.0"
+#constraint
+constraintlayoutCompose = "1.1.1"
+#Material 3 icons
+material3 = "1.7.8"
+mockk = "1.13.5"
+#Coroutines
+#lifecycleCompose = "2.8.7"
+#kotlinxCoroutines = "1.8.1"
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+#splashScreen
+androidx-core-splashscreen = {module = "androidx.core:core-splashscreen", version.ref = "coreSplashscreen" }
+androidx-storage = { group = "androidx.test.services", name = "storage", version.ref = "storage" }
+#Dagger Hilt
+dagger-hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltVersion" }
+hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hiltVersion" }
+#navigation
+androidx-navigation-runtime-ktx = { group = "androidx.navigation", name = "navigation-runtime-ktx", version.ref = "navigationRuntimeKtx" }
+androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationComposeVersion" }
+navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigation-compose" }
+#Serializable
+kotlinx-serialization-json = {module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinSerialization"}
+#Lottie
+lottie-compose = { module = "com.airbnb.android:lottie-compose", version.ref = "lottie" }
+#FirebaseBoom + Auth
+androidx-credentials = { module = "androidx.credentials:credentials", version.ref = "credentialsPlayServicesAuth" }
+androidx-credentials-play-services-auth = { module = "androidx.credentials:credentials-play-services-auth", version.ref = "credentialsPlayServicesAuth" }
+googleid = { module = "com.google.android.libraries.identity.googleid:googleid", version.ref = "googleId"}
+firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" }
+firebase-auth-ktx = { group = "com.google.firebase", name = "firebase-auth-ktx" } # Gestionada por el BoM
+#Firebase Realtime Database
+firebase-database-ktx = { group = "com.google.firebase", name = "firebase-database-ktx", version.ref = "firebaseDatabaseKtx" }
+#Coil
+coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
+#contraint
+androidx-constraintlayout-compose = { module = "androidx.constraintlayout:constraintlayout-compose", version.ref = "constraintlayoutCompose" }
+#Material 3 Icons
+compose-material-icons-extended = { group = "androidx.compose.material", name = "material-icons-extended", version.ref = "material3" }
+#Test unitarios
+mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
+#Coroutines
+#androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleCompose" }
+#androidx-lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycleCompose" }
+#kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+#ksp + dagger
+kotlin-ksp = {id = "com.google.devtools.ksp", version.ref = "ksp"}
+dagger-hilt-plugin = {id = "com.google.dagger.hilt.android", version.ref = "hiltVersion"}
+#Parcelable y serializable
+jetbrainsKotlinSerialization = {id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin"}
+kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlinParcelize" }
+#Firebase service
+gms-google-services = {id = "com.google.gms.google-services", version.ref = "gmsGoogleServices"}
